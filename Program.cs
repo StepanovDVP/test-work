@@ -19,3 +19,17 @@ List<string> EnterArr(string text)
 
 var someList = EnterArr("задайте массив");
 Console.WriteLine($"[{string.Join(", ", someList)}]");
+
+// ** метод для сортировки и извлечения нужных данных массива **
+List<string> Sorted(List<string> someList)
+{ 
+    var sortList = new List<string>();
+    foreach (var item in someList)
+    {
+        if (item.Length <= 3) sortList.Add(item);
+    }
+    return sortList;
+}
+
+var sortList = Sorted(someList);
+Console.WriteLine($"[{string.Join(", ", sortList)}]");
